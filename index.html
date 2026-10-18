@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Little Surprise for Tharshana 🫶🏼</title>
+    <meta name="theme-color" content="#100713">
+
+    <title>A Little Surprise for Tharshana 💗</title>
+
+    <meta name="description"
+          content="Someone made a little something special for you. Open it to discover your surprise. 💌">
+
+    <meta property="og:title"
+          content="A Little Surprise for Tharshana 💗">
+    <meta property="og:description"
+          content="A little surprise made with care, just for you. Open when you have a quiet moment. 💌">
+    <meta property="og:type" content="website">
+    <meta property="og:url"
+          content="https://geetha1404.github.io/ForTharshana-/">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="hearts-container"></div>
+    <div id="hearts-container" aria-hidden="true"></div>
 
     <main class="card">
         <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+
         <h1>Hey, Tharshana <span>♡</span></h1>
 
         <p class="intro">
@@ -18,16 +34,20 @@
             Take a tiny break and stay here for a moment. 🌷
         </p>
 
-        <div class="big-heart">♥</div>
+        <div class="big-heart" aria-hidden="true">♥</div>
 
-        <p>Ready for your little surprise?</p>
+        <p class="question">Ready for your little surprise?</p>
 
-        <button id="open-button">Open your surprise ♡</button>
+        <button id="open-button" type="button">
+            Open your surprise ♡
+        </button>
 
-        <section id="surprise" class="hidden">
+        <section id="surprise" class="hidden" aria-live="polite">
+            <div class="divider-heart">♡ ─── ♡</div>
+
             <h2>A little message for you 💌</h2>
 
-            <p>Hi, Tharshana 🫶🏼 </p>
+            <p>Hi, Tharshana 💗</p>
 
             <p>
                 I know your exams are coming soon, so I just wanted
@@ -37,18 +57,23 @@
             <p>
                 Do your best, take care of yourself, and remember
                 to rest too. Don't put too much pressure on yourself,
-                okay? I'm cheering for you..... 🫶🏼
+                okay? I'm cheering for you. 💗
             </p>
 
             <h3>All the best for your exams, my girl! ♡</h3>
 
-            <button id="hug-button">Send you a virtual hug 🫂</button>
+            <p class="signature">Made with care, just for you ♡</p>
+
+            <button id="hug-button" class="secondary-button" type="button">
+                Send you a virtual hug 🫂
+            </button>
+
             <p id="hug-message" class="hidden">
-                Sending you the biggest virtual hug! 🫶🏼
+                Sending you the biggest virtual hug! 💗
             </p>
         </section>
 
-        <p class="footer">Made with care, just for you ♡</p>
+        <p class="footer">A little corner of the internet, just for you ✨</p>
     </main>
 
     <script src="script.js"></script>
