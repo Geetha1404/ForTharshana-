@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    overflow-x: hidden;
+    color: #fff0f7;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    background: radial-gradient(ellipse at top, #35152f, #100713 70%);
+}
+
+#hearts-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -40px;
+    color: #ff78b7;
+    text-shadow: 0 0 15px #ff3d99;
+    animation: float-up linear forwards;
+}
+
+@keyframes float-up {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    15% { opacity: 0.8; }
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 540px;
+    padding: 35px 25px;
+    border: 1px solid #ff78b744;
+    border-radius: 25px;
+    background: #211323dd;
+    box-shadow: 0 0 45px #ff4da61c;
+    backdrop-filter: blur(12px);
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.eyebrow {
+    color: #ff78b7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 46px);
+}
+
+h1 span, h3 {
+    color: #ff91c5;
+}
+
+.intro {
+    color: #c9afc4;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.big-heart {
+    margin: 30px 0;
+    color: #ff5fa9;
+    font-size: 80px;
+    text-shadow: 0 0 15px #ff3d99, 0 0 35px #ff3d9966;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.12); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.08); }
+}
+
+button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(100deg, #ffacd2, #ff6eae);
+    color: #371127;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#surprise {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #ff78b733;
+    animation: appear 0.7s ease;
+}
+
+#surprise p {
+    color: #ead7e6;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+#surprise h2 {
+    color: #ffd2e7;
+}
+
+#surprise h3 {
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
+
+#hug-button {
+    margin-top: 10px;
+    background: #ff78b71c;
+    border: 1px solid #ff78b766;
+    color: #ffd2e7;
+}
+
+#hug-message {
+    color: #ff91c5 !important;
+    font-weight: 700;
+}
+
+.footer {
+    margin-top: 28px;
+    color: #a88ca5;
+    font-size: 11px;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 28px 18px;
+    }
+}
